@@ -59,3 +59,25 @@ namespace ConstructorInterview
         // staic Constructor parent fires
         // normal Constructor parent fires
         // normal Constructor child fires
+
+
+    // Ques:when does Static Constructor fires? will fire first, when access anything first time.
+ // Ans  Static Constructor fires first, when access anything first time.
+
+        class Program
+    {
+        static void Main(string[] args)
+        {
+            Human.M1();
+        }
+    }   
+    public  class Human
+    {
+        
+        public static void M1(){
+            Console.WriteLine("Human");
+        }
+        static Human(){
+            Console.WriteLine("static Human");
+        }
+    }
